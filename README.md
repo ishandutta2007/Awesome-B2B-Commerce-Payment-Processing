@@ -125,9 +125,9 @@ The sector remains **moderately to highly fragmented** rather than a "winner-tak
 
 ### 🌟 Open-Source Solutions Ranked by Stars
 
-*Sorted in descending order by GitHub Stars.*
+*Sorted in descending order by GitHub_Stars.*
 
-| Project | Stars Badge (Links to Stargazers) | Primary Tech Stack | Core Architecture & Focus | License |
+| Project | Stars_Badge (Links to Stargazers) | Primary Tech Stack | Core Architecture & Focus | License |
 | :--- | :---: | :--- | :--- | :--- |
 | **[Hyperswitch](https://github.com/juspay/hyperswitch)** | [![Stars](https://img.shields.io/github/stars/juspay/hyperswitch?style=social&color=white)](https://github.com/juspay/hyperswitch/stargazers) | Rust, ReScript, TypeScript | **Payment Orchestration Engine**: High-throughput routing across 100+ gateways, PCI card vault, and smart retries. | Apache 2.0 |
 | **[Medusa](https://github.com/medusajs/medusa)** | [![Stars](https://img.shields.io/github/stars/medusajs/medusa?style=social&color=white)](https://github.com/medusajs/medusa/stargazers) | Node.js, TypeScript, PostgreSQL | **Composable Headless Commerce**: Modular commerce engine with extensible customer groupings, carts, and payment handlers. | MIT |
