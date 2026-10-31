@@ -1,195 +1,241 @@
-# Awesome-B2B-Commerce-Payment-Processing
+# Awesome B2B Commerce & Payment Processing Solutions 🚀
 
-# Awesome-B2B-Commerce-Payment-Processing
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ishandutta2007/Awesome-B2B-Commerce-Payment-Processing/pulls)
+[![Last Updated](https://img.shields.io/badge/Updated-October%202026-blue.svg)](https://github.com/ishandutta2007/Awesome-B2B-Commerce-Payment-Processing)
 
-**Top B2B Commerce Payment Processing (Opensource) 🌟 Star if you like it! 🌟**
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**
-
-*Focused on B2B Checkout, Payment Orchestration, Level 2/3 Card Processing & Composable Commerce*
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **B2B Commerce & Payment Processing**. These tools enable businesses to accept payments for complex B2B transactions—handling purchase orders, net terms, level 2/3 card data, multi-currency, and high-volume processing—from fully managed processors with optimized interchange rates to open-source commerce platforms and payment orchestration layers that give organizations complete control over their checkout and payment infrastructure.
-
-
-
-**Examples** include Stripe, Adyen, Helcim, Checkout.com, Braintree, Mollie, Square, Authorize.Net, and PayPal B2B (the category leaders in commercial space).
-
-
-
-**Open-source emphasis**: This section is expanded with every relevant project for self-hosted commerce, payment orchestration, and open B2B infrastructure. **Critical note**: The open-source landscape splits into two categories—**payment orchestration platforms** (Hyperswitch) that unify multiple processors, and **B2B commerce platforms** (Spree, GrandNode, Vendure) that include payment processing as part of a complete storefront. No open-source project provides a turnkey payment processor like Stripe or Helcim; those require commercial relationships.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Stripe](https://stripe.com/)**
-
-  **Full-stack payment infrastructure** with B2B capabilities including invoicing, recurring billing, and Level 2/3 card processing for eligible transactions. Clean APIs and pre-built SDKs enable fast deployment of custom checkouts; shareable payment links support one-time and recurring payments without coding . **Pricing**: 2.9% + $0.30 per card transaction; volume discounts negotiated. **Free tier**: None for payments. **Best for**: developers wanting the most mature API-first payment platform with broad B2B billing features.
-
-
-
-- **[Adyen](https://www.adyen.com/)**
-
-  **Enterprise payment platform** with unified online and in-person processing, B2B card optimization, and global payment method coverage. **Pricing**: Quote-only; interchange-plus or blended models. **Free tier**: None. **Best for**: enterprises wanting a single platform for omnichannel B2B payments.
-
-
-
-- **[Helcim](https://www.helcim.com/)**
-
-  **B2B-focused payment processor** with **automatic Level 2/3 data optimization** for eligible corporate and government cards, reducing interchange fees on qualifying transactions . Helcim automatically gathers and submits required line-item data (SKU, description, quantity, tax amount) to card networks, and charges a percentage of the savings generated . Integration Partner Program offers revenue share for platforms embedding Helcim payments . **Pricing**: Interchange-plus with a share of L2/L3 savings. **Free tier**: None. **Best for**: B2B merchants processing significant corporate card volume wanting lower interchange without manual data entry.
-
-
-
-- **[Checkout.com](https://www.checkout.com/)**
-
-  **Enterprise payment processing** with B2B capabilities, local acquiring, and fraud tools. **Pricing**: Quote-only; interchange-plus models. **Free tier**: None. **Best for**: large B2B merchants wanting direct acquiring relationships and modern APIs.
-
-
-
-- **[Braintree](https://www.braintreepayments.com/)** (PayPal)
-
-  **Payment gateway** supporting cards, PayPal, Venmo, and alternative methods. **Pricing**: Standard processing rates; volume-based negotiation. **Free tier**: None. **Best for**: businesses wanting a unified gateway with PayPal ecosystem integration.
-
-
-
-- **[Mollie](https://www.mollie.com/)**
-
-  **European payment processor** with B2B-friendly APIs and local payment methods. **Pricing**: Transparent per-transaction fees; no monthly minimums. **Free tier**: None. **Best for**: European B2B businesses wanting simple, transparent pricing and local methods.
-
-
-
-- **[Square](https://squareup.com/)**
-
-  **Omnichannel payment platform** with B2B invoicing and recurring billing. **Pricing**: 2.9% + $0.30 per online transaction. **Free tier**: None for payments. **Best for**: small to mid-size B2B businesses wanting unified online and in-person payments.
-
-
-
-- **[Authorize.Net](https://www.authorize.net/)** (Visa)
-
-  **Established payment gateway** with B2B invoicing and recurring billing support. **Pricing**: Monthly gateway fee plus per-transaction fees. **Free tier**: None. **Best for**: businesses wanting a proven, stable gateway with broad processor compatibility.
-
-
-
-- **[PayPal B2B](https://www.paypal.com/)**
-
-  **PayPal's business payment solutions** including invoicing, net terms, and working capital. **Pricing**: Standard PayPal merchant fees. **Free tier**: None. **Best for**: B2B sellers wanting access to PayPal's buyer network and invoice-based payment workflows.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **[Hyperswitch](https://github.com/juspay/hyperswitch)**
-
-  **Open-source payments orchestration platform** (Apache 2.0 for core) — **the most significant open-source infrastructure for B2B payment processing**, built by Juspay (powering 300M+ daily transactions and $1T+ annualized TPV for enterprises including Amazon, Agoda, and Zurich) . **Features**: Unified API across **100+ payment processors** (Stripe, Adyen, PayPal, Global Payments, Bank of America) ; **intelligent routing and smart retries** to uplift authorization rates; **PCI-compliant card vault**; **cost observability** and reconciliation; **modular architecture**—use the full orchestration suite or pick individual modules (routing, vault, retries) ; **web checkout SDKs** and mobile SDKs (Android, iOS, React Native, Flutter) ; **~10K TPS** peak capacity . **Tech stack**: Rust (core), ReScript (SDKs). **Deploy**: Self-hosted or Hyperswitch Cloud. **Trade-off**: **Orchestration layer, not a merchant account**—it routes to processors but you still need processor relationships. PCI compliance responsibility shifts to you when self-hosting. **Best for**: B2B merchants wanting to reduce processor lock-in, improve authorization rates via routing, and unify payment operations across multiple processors—without rebuilding orchestration from scratch.
-
-
-
-- **[Spree Commerce 5.6](https://github.com/spree/spree)**
-
-  **Open-source B2B commerce platform** (AGPL-3.0 for Community) — **the most battle-tested open-source B2B storefront with payment integration**, validated at scale by Maisonette (65,000+ products, hundreds of brands) . **Features**: **B2B wholesale portal** with spreadsheet-style grid ordering, customer-specific pricing at checkout when wholesale thresholds are met ; **Price Lists** for custom pricing by buyer organization, geography, or segment ; **multi-vendor marketplace module** (Community Edition) with vendor onboarding, commission management, and split-shipment tracking ; **Enterprise Edition** adds Stripe Connect payouts, Adyen for Platforms, and buyer organizations with spending limits and role-based purchasing ; **payments** via Stripe, Adyen, and others. **Tech stack**: Ruby on Rails. **Deploy**: Self-hosted (Docker-first in 5.6; single image runs web and jobs, no Redis required) . **Trade-off**: **Full platform adoption required**—it is a complete commerce system, not a payment plugin. PCI compliance is your responsibility. **Best for**: B2B distributors and wholesalers wanting a proven open-source storefront with native wholesale pricing and payment integration.
-
-
-
-- **[GrandNode](https://github.com/grandnode/grandnode2)**
-
-  **Open-source e-commerce platform for .NET** (license per repo) — **the strongest open-source option for .NET B2B teams**, with native B2B features and multi-vendor support . **Features**: **B2B and B2C** from the same catalog; **customer groups, tier prices, sales employees** for B2B workflows ; **multi-store** and **multi-vendor marketplace**; **payments** via Stripe Checkout, Braintree, cash on delivery, and plugins; **REST API** for headless storefronts and ERP/PIM/CRM integration ; Docker and Kubernetes deployment. **Tech stack**: ASP.NET Core 10, C#, MongoDB, Vue 3. **Deploy**: Self-hosted (Docker images on Docker Hub and GHCR) . **Trade-off**: **.NET ecosystem lock-in**—best for teams already on C#/.NET. MongoDB dependency. Payment processing requires third-party plugins and merchant accounts. **Best for**: .NET development teams wanting a self-hosted B2B commerce platform with tier pricing, multi-store, and headless API capabilities.
-
-
-
-- **[Vendure](https://github.com/vendurehq/vendure)**
-
-  **Open-source headless commerce platform** (GPLv3) — **the most TypeScript-native B2B commerce framework**, with a plugin-first architecture and GraphQL API . **Features**: Model **D2C, B2B, marketplace, and omnichannel** on one backend; **plugin contracts** for extending pricing logic and workflows without forking ; **GraphQL schema** is introspectable, making LLM tool-calling and agent integration straightforward ; **Vendure Platform** (commercial) adds SSO, approval workflows, and B2B pricing on the same open-source core ; **payments** via plugins (Stripe, Braintree, etc.). **Tech stack**: Node.js, NestJS, GraphQL, PostgreSQL/MySQL/SQLite. **Deploy**: Self-hosted, Docker, Kubernetes, or Vendure Cloud (managed PaaS) . **Trade-off**: **Framework, not a turnkey store**—you build the storefront and configure payment plugins. B2B pricing and approval workflows require Vendure Platform licensing. **Best for**: TypeScript developers wanting a headless B2B commerce backend with strong plugin extensibility and GraphQL API.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Medusa** — Open-source headless commerce platform (MIT). Modular architecture with separate cart, payment, and fulfillment modules; requires custom development for B2B-specific features like tier pricing and purchase orders. **Best for**: developers wanting a modern TypeScript commerce foundation to build B2B workflows upon.
-
-- **Saleor** — GraphQL-first headless commerce (BSD-3-Clause). Mature API; B2B features require custom development or third-party apps. **Best for**: teams wanting a GraphQL-native commerce backend.
-
-- **SHKeeper** — Self-hosted open-source cryptocurrency gateway payment processor (Python, ~264 stars). Integrates with popular CMS and any e-commerce platform . **Note**: Crypto payments only—not traditional B2B card processing. **Best for**: B2B merchants wanting to accept cryptocurrency alongside traditional rails.
-
-
-
-**Frameworks for building custom systems**: Combine **Hyperswitch** as the payment orchestration layer across processors with **Spree Commerce** or **GrandNode** as the B2B storefront, and **Vendure** for a TypeScript-native headless approach—creating a B2B commerce stack. **None of these provide a merchant account or Level 2/3 optimization** like Helcim; those require commercial processor relationships.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, license (for open-source), and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- B2B payment platforms handling card data and financial transactions must comply with **PCI DSS**, data protection regulations (GDPR, CCPA, etc.), and card network rules for Level 2/3 processing.
-
-- **The "payment processor" vs. "payment orchestration" vs. "commerce platform" distinction is critical.** **Stripe, Adyen, Helcim, Checkout.com, Braintree, Mollie, Square, Authorize.Net, and PayPal** are **payment processors**—they hold merchant accounts, settle funds, and handle interchange. **Hyperswitch** is **payment orchestration**—it routes transactions across processors but does not provide a merchant account . **Spree, GrandNode, and Vendure** are **commerce platforms**—they include payment integration but require a processor relationship. **No open-source project provides a turnkey B2B merchant account.**
-
-- **Helcim's Level 2/3 optimization is a genuine B2B differentiator.** It automatically captures and submits line-item data to card networks, reducing interchange on eligible corporate and government cards . **Open-source platforms require custom development to pass L2/L3 data**—Helcim's automation is a commercial advantage.
-
-- **Hyperswitch is the most significant open-source B2B payment infrastructure** in this list, with 100+ processor connectors, intelligent routing, and enterprise-scale validation . **The trade-off**: it is orchestration, not a merchant account—you still need processor relationships and PCI compliance responsibility when self-hosting.
-
-- **Spree Commerce 5.6 is the most proven open-source B2B storefront** with native wholesale pricing, spreadsheet ordering, and marketplace capabilities . **The trade-off**: full platform adoption; PCI compliance is yours.
-
-- **GrandNode is the choice for .NET teams** with native B2B features (tier prices, customer groups) and multi-vendor support . **Vendure is the TypeScript-native headless option** with strong plugin extensibility and GraphQL API .
-
-- **Pricing opacity varies.** Stripe, Mollie, Square, and Authorize.Net publish standard rates. Helcim uses interchange-plus with L2/L3 savings sharing. Adyen, Checkout.com, and PayPal B2B require sales contact. **Validate with direct vendor conversations against your card volume and B2B transaction profile.**
-
-- Self-hosted open-source solutions require proper infrastructure, payment processor integration, PCI DSS compliance (if handling card data), and ongoing maintenance. **B2B payment data is highly sensitive**—ensure your deployment meets all applicable security and compliance requirements before processing live transactions.
-
-
+> A curated list of top **B2B Commerce Platforms**, **Payment Processing Gateways**, **Payment Orchestration Systems**, and **Level 2/3 Interchange Optimization** tools (both SaaS products and open-source GitHub software).
 
 ---
 
+## 📖 Overview & SEO Quick Summary
 
+This repository aggregates industry-leading tools and frameworks built for modern B2B transactions:
+- **B2B Payment Gateways & Processors**: Enabling corporate card processing, ACH/SEPA, Net-30/60 trade credit terms, purchase orders (PO), split payouts, and recurring wholesale invoicing.
+- **Level 2 & Level 3 Card Processing**: Interchanges fee optimization by submitting line-item invoice data (tax amount, item description, freight, customer code) to card networks (Visa & Mastercard).
+- **Payment Orchestration**: Smart routing, multi-acquirer fallbacks, retry logic, and card vaults to reduce processor lock-in and enhance authorization rates.
+- **Composable & Headless B2B E-Commerce**: Modular storefront engines with wholesale price lists, customer tiers, and catalog entitlement capabilities.
 
-**Made for developers, B2B merchants, and organizations building transparent commerce and payment processing solutions.**
+---
 
-Let's make B2B Commerce & Payment Processing more open, data-driven, and merchant-friendly.
+## 📑 Table of Contents
+
+- [Overview & SEO Quick Summary](#-overview--seo-quick-summary)
+- [SaaS & Hosted Payment Platforms](#-saashosted-payment-platforms)
+  - [SaaS Pricing & Feature Matrix](#saas-pricing--feature-matrix)
+  - [Detailed SaaS Profiles](#detailed-saas-profiles)
+- [Open-Source GitHub Projects](#-open-source-github-projects)
+  - [Payment Orchestration & Middleware](#payment-orchestration--middleware)
+  - [B2B E-Commerce & Storefront Frameworks](#b2b-e-commerce--storefront-frameworks)
+  - [Additional Open-Source Alternatives](#additional-open-source-alternatives)
+- [B2B Architecture: Processors vs Orchestration vs Commerce Platforms](#-architecture-comparison)
+- [How to Contribute](#-how-to-contribute)
+- [Disclaimer & Compliance](#-disclaimer--compliance)
+
+---
+
+## 💳 SaaS/Hosted Payment Platforms
+
+### SaaS Pricing & Feature Matrix
+
+| Provider | Model / Focus | Level 2 / Level 3 Processing | Pricing | Free Tier / Trial Limits | Key Best For |
+| :--- | :--- | :---: | :--- | :--- | :--- |
+| **[Stripe](https://stripe.com/)** | Full-Stack Gateway & Invoicing | Yes (Eligible transactions) | `2.9% + $0.30` per card transaction (Volume discounts available) | **None** (Pay-as-you-go; developer testmode free) | API-first B2B billing, invoicing, and subscription billing |
+| **[Adyen](https://www.adyen.com/)** | Global Omnichannel Processor | Yes (Enterprise interchange optimization) | Custom quote (Interchange++ or blended rates) | **None** (Custom enterprise onboarding only) | Global enterprises requiring unified online + in-person processing |
+| **[Helcim](https://www.helcim.com/)** | B2B Interchange Optimizer | Yes (Automatic automated line-item submission) | Interchange-plus + percentage share of L2/L3 savings | **None** (No monthly subscription; transaction fees only) | B2B merchants processing high corporate card volume seeking lower interchange rates |
+| **[Checkout.com](https://www.checkout.com/)** | Enterprise Acquiring & Payments | Yes (Direct acquiring capabilities) | Custom quote (Interchange-plus model) | **None** (Enterprise sales contract required) | High-volume cross-border B2B merchants |
+| **[Braintree](https://www.braintreepayments.com/)** | Payment Gateway & PayPal Ecosystem | Yes | Standard card processing rates (`~2.59% + $0.49`) or custom volume | **None** (Production usage requires approval; sandbox free) | Unifying card processing with PayPal, Venmo, and digital wallets |
+| **[Mollie](https://www.mollie.com/)** | European Payment Processor | Varies by method | Transparent per-transaction rates (No monthly minimums) | **None** (Pay-per-transaction only) | European B2B businesses needing local EU payment methods |
+| **[Square](https://squareup.com/)** | Omnichannel Invoicing & POS | Standard card capture | `2.9% + $0.30` per online transaction; invoice-specific plans available | **Free tier available for invoicing software** (Free plan covers basic invoices; standard processing fee per paid invoice) | Small-to-midsize businesses wanting simple B2B invoicing + POS |
+| **[Authorize.Net](https://www.authorize.net/)** | Payment Gateway | Supported via merchant account | `$25/mo gateway fee + $0.10 per transaction` (+ daily batch fee) | **None** (Gateway subscription + card processing fees apply) | Businesses requiring a reliable gateway integrated into legacy ERPs |
+| **[PayPal B2B](https://www.paypal.com/)** | Business Payments & Invoicing | Standard processing | Standard merchant fees (`~2.99% - 3.49% + fixed fee`) | **None** (Pay-per-transaction; free business account setup) | Sellers wanting buyer protection, invoice workflows, and access to PayPal's network |
+
+---
+
+### Detailed SaaS Profiles
+
+#### [Stripe](https://stripe.com/)
+- **Category**: Full-stack payment infrastructure & developer platform.
+- **Capabilities**: Developer-friendly APIs and SDKs for global payouts, customer portals, custom checkout flows, and automated invoicing. Supports Level 2 and Level 3 data processing on eligible cards to lower interchange fees.
+- **Pricing**: 2.9% + $0.30 per card transaction; enterprise volume pricing available.
+- **Free Tier**: No free processing tier (developer sandbox is free).
+- **Target Audience**: Startups and enterprise engineering teams seeking rapid integration and broad ecosystem connectivity.
+
+#### [Adyen](https://www.adyen.com/)
+- **Category**: Unified commerce enterprise processor.
+- **Capabilities**: Direct connection to global card networks and local payment schemes. Offers advanced fraud protection, revenue acceleration, and centralized reporting across cross-border subsidiaries.
+- **Pricing**: Transparent Interchange++ or custom pricing model.
+- **Free Tier**: None.
+- **Target Audience**: Global mid-market and enterprise organizations wanting an omnichannel payments partner.
+
+#### [Helcim](https://www.helcim.com/)
+- **Category**: Interchange-plus B2B merchant service provider.
+- **Capabilities**: **Automatic Level 2/3 Data Optimization**—automatically constructs and submits SKU, tax, item descriptions, and customer PO numbers to Visa/Mastercard networks, saving up to 0.5%–1.5% on qualifying commercial card transactions.
+- **Pricing**: Transparent interchange-plus pricing with fee reductions as volume scales; takes a share of verified interchange savings.
+- **Free Tier**: None (zero monthly account fee).
+- **Target Audience**: B2B wholesalers, manufacturers, and distributors taking high-ticket corporate and government purchasing cards.
+
+#### [Checkout.com](https://www.checkout.com/)
+- **Category**: Direct acquiring payment partner.
+- **Capabilities**: Real-time payment analytics, automated routing, chargeback protection, and support for over 150 currencies.
+- **Pricing**: Custom quote based on business volume and geography.
+- **Free Tier**: None.
+- **Target Audience**: High-growth enterprise tech companies and large-scale wholesale operations.
+
+#### [Braintree](https://www.braintreepayments.com/)
+- **Category**: Global payment gateway (a PayPal service).
+- **Capabilities**: Comprehensive SDK for web and mobile checkouts; seamless integration with PayPal, Venmo, Apple Pay, Google Pay, and major credit cards.
+- **Pricing**: Standard 2.59% + $0.49 per transaction; custom rates for high-volume accounts.
+- **Free Tier**: None (sandbox is free).
+- **Target Audience**: Merchants prioritizing digital wallet conversions alongside standard merchant accounts.
+
+#### [Mollie](https://www.mollie.com/)
+- **Category**: European payment service provider (PSP).
+- **Capabilities**: Out-of-the-box support for iDEAL, Bancontact, SEPA Direct Debit, and European B2B payment methods with intuitive dashboards and plug-and-play integrations.
+- **Pricing**: Fixed per-transaction pricing; no setup or hidden monthly costs.
+- **Free Tier**: None.
+- **Target Audience**: EU-based B2B businesses expanding across European markets.
+
+#### [Square](https://squareup.com/)
+- **Category**: Integrated omnichannel commerce & invoicing suite.
+- **Capabilities**: Digital invoicing with automatic reminders, recurring credit card payments, card-on-file billing, and POS terminal hardware.
+- **Pricing**: 2.9% + $0.30 per online/invoice transaction; Square Invoices Plus available at $20/month for advanced milestone and multi-package billing.
+- **Free Tier**: Free Invoices tier available (no monthly software fee; pay standard processing when customer pays).
+- **Target Audience**: Trades, contractors, consulting agencies, and SMB B2B distributors.
+
+#### [Authorize.Net](https://www.authorize.net/)
+- **Category**: Legacy payment gateway by Visa.
+- **Capabilities**: Secure customer data manager (CIM), automated recurring billing (ARB), fraud detection suite (AFDS), and broad compatibility with third-party merchant accounts and ERP software.
+- **Pricing**: $25/month gateway subscription + $0.10 per transaction + $0.10 daily batch fee.
+- **Free Tier**: None.
+- **Target Audience**: Mid-market enterprises using established ERPs requiring separate processor and gateway topologies.
+
+#### [PayPal B2B](https://www.paypal.com/)
+- **Category**: Global business payments and commercial network.
+- **Capabilities**: Professional invoicing, dispute mediation, installment financing, and multi-currency business accounts with buyer and seller protections.
+- **Pricing**: Standard commercial fee schedule.
+- **Free Tier**: None (free account creation).
+- **Target Audience**: B2B vendors looking for instant brand recognition and buyer familiarity.
+
+---
+
+## 💻 Open-Source GitHub Projects
+
+### Payment Orchestration & Middleware
+
+#### [Hyperswitch](https://github.com/juspay/hyperswitch)
+- **Repo**: `juspay/hyperswitch`
+- **License**: Apache 2.0 (Core)
+- **Tech Stack**: Rust (High performance backend), ReScript (Web SDKs)
+- **Description**: High-throughput open-source payment orchestration engine created by Juspay (handling 300M+ daily transactions).
+- **Key Features**:
+  - Unified API connecting **100+ payment gateways & acquirers** (Stripe, Adyen, PayPal, Worldpay, etc.).
+  - **Dynamic smart routing & retry engine** to automatically maximize payment authorization rates and lower fees.
+  - **PCI DSS compliant card vault** with tokenization.
+  - ~10,000 TPS peak transaction capacity.
+  - Pre-built checkout SDKs for Web, React Native, Flutter, iOS, and Android.
+- **Deployment**: Self-hosted Docker/Kubernetes or Hyperswitch Cloud managed PaaS.
+- **Architecture Note**: Acts as an orchestration router. You supply and link your own merchant acquiring accounts.
+
+---
+
+### B2B E-Commerce & Storefront Frameworks
+
+#### [Spree Commerce](https://github.com/spree/spree)
+- **Repo**: `spree/spree`
+- **License**: AGPL-3.0 (Community Edition)
+- **Tech Stack**: Ruby on Rails, Turbo/Hotwire
+- **Description**: Battle-tested modular open-source commerce platform used by enterprises handling massive product catalogs.
+- **Key Features**:
+  - Native **B2B Wholesale Portal** with matrix/grid ordering for rapid SKU entry.
+  - **Price Lists** matching customer tiers, contract pricing, volume pricing, and geographic segmentation.
+  - Multi-vendor marketplace module included.
+  - Turnkey integrations with Stripe, Adyen, and traditional payment gateways.
+- **Deployment**: Docker-first architecture (no mandatory Redis requirement for baseline workloads).
+
+#### [GrandNode](https://github.com/grandnode/grandnode2)
+- **Repo**: `grandnode/grandnode2`
+- **License**: Open-source (per repo)
+- **Tech Stack**: ASP.NET Core (.NET), C#, MongoDB, Vue.js
+- **Description**: Enterprise-oriented .NET B2B commerce platform built for high-performance and distributed environments.
+- **Key Features**:
+  - Unified catalog handling simultaneous B2B and B2C channels.
+  - Customer group rules, tier-based pricing structures, quote requests, and assigned sales representative routing.
+  - RESTful and Headless Web API for deep integration with Microsoft Dynamics, SAP, and custom ERP systems.
+- **Deployment**: Pre-built Docker images (Docker Hub, GHCR) and Kubernetes helm charts.
+
+#### [Vendure](https://github.com/vendurehq/vendure)
+- **Repo**: `vendurehq/vendure`
+- **License**: GPLv3 (Core)
+- **Tech Stack**: TypeScript, Node.js, NestJS, GraphQL, PostgreSQL / MySQL
+- **Description**: Modern headless commerce framework built with a plugin-first paradigm for TypeScript engineering teams.
+- **Key Features**:
+  - Fully typed GraphQL API enabling composable storefronts (Next.js, Nuxt, Remix).
+  - Extensible plugin architecture for custom B2B approval workflows, contract pricing, and credit balances.
+  - Clean schema introspectability facilitating AI agent tool-calling and LLM checkout orchestration.
+- **Deployment**: Self-hosted Docker or managed PaaS (Vendure Cloud).
+
+---
+
+### Additional Open-Source Alternatives
+
+- **[Medusa](https://github.com/medusajs/medusa)** (MIT): Composable commerce engine in Node.js/TypeScript. Highly modular design with independent pricing, cart, and order modules suitable for customized B2B logic.
+- **[Saleor](https://github.com/saleor/saleor)** (BSD-3-Clause): High-performance GraphQL-native headless commerce platform built with Python and Django.
+- **[SHKeeper](https://github.com/vsd-common/shkeeper)** (Open Source): Self-hosted cryptocurrency payment gateway in Python. Ideal for B2B merchants accepting crypto rails alongside fiat payment processors.
+
+---
+
+## 🏛 Architecture Comparison
+
+```
++---------------------------------------------------------------+
+|                      B2B Buyer Checkouts                      |
+|           (Customer Portal / Invoicing / Storefront)          |
++---------------------------------------------------------------+
+                               |
+                               v
++---------------------------------------------------------------+
+|             B2B Commerce Storefront Platform                  |
+|          (Spree Commerce / GrandNode / Vendure)               |
+|   * Customer Tiers     * Wholesale Price Lists    * POs       |
++---------------------------------------------------------------+
+                               |
+                               v
++---------------------------------------------------------------+
+|                 Payment Orchestration Layer                   |
+|                       (Hyperswitch)                           |
+|   * Smart Routing      * Card Vault       * Retry Fallback    |
++---------------------------------------------------------------+
+                               |
+                               v
++---------------------------------------------------------------+
+|               Commercial Payment Processors                   |
+|              (Stripe / Helcim / Adyen / Mollie)               |
+|   * Merchant Accounts  * Settlement   * Level 2/3 Interchange |
++---------------------------------------------------------------+
+```
+
+### Key Differences
+1. **Payment Processors (Stripe, Helcim, Adyen)**: Provide merchant accounts, underwriting, interchange settlement, and card network compliance.
+2. **Payment Orchestration (Hyperswitch)**: Routes transactions across multiple processors, minimizes downtime, and reduces interchange costs via smart rules. Does not hold funds.
+3. **B2B Commerce Engines (Spree, Vendure, GrandNode)**: Provide catalogs, customer accounts, wholesale pricing, and shopping carts. Require processor/orchestration integrations for checkout execution.
+
+---
+
+## 🤝 How to Contribute
+
+We welcome community contributions! To suggest new tools or update existing details:
+1. Fork this repository.
+2. Edit `README.md` maintaining the existing structure and Markdown tables.
+3. If adding a SaaS product, make sure to specify its pricing structure and free tier limitations.
+4. If adding an open-source project, include its repository link, tech stack, and license.
+5. Submit a Pull Request with a clear summary of your additions.
+
+---
+
+## ⚖️ Disclaimer & Compliance
+
+- This repository is an open-source directory maintained for informational purposes only; it does not constitute financial, legal, or payment processing advice.
+- Businesses processing credit card information must ensure compliance with **PCI DSS** standards. Self-hosting payment systems shifts data security responsibilities to your infrastructure team.
+- **Level 2 & Level 3 interchange rates** require submitting verified line-item data and depend on specific card network eligibility (commercial, purchasing, corporate, and government credit cards).
